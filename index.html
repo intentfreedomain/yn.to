@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Transition | Intent FreeDomain</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Decorative background elements */
+        .blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.2;
+            top: 10%;
+            left: 5%;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-area {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #60a5fa, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .alert-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            color: #f8fafc;
+        }
+
+        .content-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: left;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        .highlight {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        .domain-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+
+        .domain-tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 16px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #60a5fa;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(96, 165, 250, 0.3);
+        }
+
+        .btn-discord {
+            background: #5865F2;
+            color: #ffffff;
+        }
+
+        .btn-discord:hover {
+            transform: translateY(-3px);
+            background: #4752c4;
+            box-shadow: 0 10px 20px rgba(88, 101, 242, 0.3);
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        @media (max-width: 600px) {
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blob"></div>
+    <div class="container">
+        <div class="logo-area">Intent FreeDomain</div>
+        
+        <div class="alert-badge">
+            <i class="fas fa-handshake me-2"></i> Official Partnership Notice
+        </div>
+
+        <h1>This Domain is now managed by <span class="highlight">Intent FreeDomain</span></h1>
+
+        <div class="content-box">
+            Following a strategic collaboration between <span class="highlight">20Dragons</span> and <span class="highlight">Intent FreeDomain</span>, we are pleased to announce a service merger. 
+            <br><br>
+            If you are arriving from <strong>20dragons.com</strong>, your domains are safe. You can simply create a new account on the Intent website to claim your existing domains back.
+            <br>
+            Visit the Main Website by clicking the Button Down.
+            
+            <div class="domain-list">
+                <span class="domain-tag">INT.YT(Intent Own)</span>
+                <span class="domain-tag">NC.TO(20Dragons.com transferred)</span>
+                <span class="domain-tag">GW.TO(20Dragons.com transferred)</span>
+                <span class="domain-tag">RH.TO(20Dragons.com transferred)</span>
+                <span class="domain-tag">YN.TO(20Dragons.com transferred)</span>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <a href="https://int.yt" class="btn btn-primary">
+                <i class="fas fa-globe"></i> Main Website
+            </a>
+            <a href="https://discord.gg/mFpW2sp66C" target="_blank" class="btn btn-discord">
+                <i class="fab fa-discord"></i> Support Discord
+            </a>
+        </div>
+
+        <p class="footer-note">
+            &copy; 2026 Intent FreeDomain. Ensuring reliable DNS for the community.
+        </p>
+    </div>
+</body>
+</html>
